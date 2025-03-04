@@ -1,0 +1,4 @@
+*.env
+
+data/arxiv_papers_pdf/*
+!data/arxiv_papers_pdf/.gitkeep
