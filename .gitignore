@@ -2,3 +2,11 @@
 
 data/arxiv_papers_pdf/*
 !data/arxiv_papers_pdf/.gitkeep
+
+
+data/arxiv_papers_json/*
+!data/arxiv_papers_json/.gitkeep
+
+
+data/arxiv_papers_chunks_json/*
+!data/arxiv_papers_chunks_json/.gitkeep
