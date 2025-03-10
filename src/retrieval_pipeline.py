@@ -1,7 +1,6 @@
 import os
 import chromadb
 import ollama
-import numpy as np
 from dotenv import load_dotenv
 
 # Load environment variables
@@ -39,7 +38,7 @@ def retrieve_relevant_chunks(query, top_k=5):
     return retrieved_chunks, retrieved_metadata
 
 
-def generate_answer(query):
+def generate_answer(query, chat_history):
     """Retrieve relevant chunks and use LLaMA 3 to generate an answer."""
 
     # Retrieve relevant chunks
@@ -48,13 +47,19 @@ def generate_answer(query):
     # Format retrieved chunks as context
     context = "\n\n".join(retrieved_chunks)
 
+    # Build chat history for context
+    history = "\n\n".join([f"User: {msg['user']}\nAI: {msg['ai']}" for msg in chat_history])
+
     # Create the final prompt for LLaMA 3
     prompt = f"""You are an AI assistant. Use the following retrieved information to answer the user's query:
+    
+        Chat History:
+        {history}
 
         Context:
         {context}
 
-        Query: {query}
+        User Query: {query}
 
         Provide a well-structured answer based on the provided context.
         """
@@ -65,11 +70,4 @@ def generate_answer(query):
     return response["message"]["content"]
 
 
-# Example Query
-query = "What is Large Language Model?"
-answer = generate_answer(query)
-
-# Print the Answer
-print("\n📝 Generated Answer:\n")
-print(answer)
 
