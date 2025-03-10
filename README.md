@@ -16,11 +16,11 @@ Research Genie is a Retrieval Augmented Generation (RAG) based chatbot that answ
 
 ## Install Dependencies 
 
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 ## Run the application
 
-streamlit run app.py
+`streamlit run app.py`
 
 ## Using Ollama for LLAMA3
 
@@ -29,7 +29,7 @@ https://ollama.ai/
 
 Then download LLama3 using
 
-ollama pull llama3
+`ollama pull llama3`
 
 ## How it works
 
