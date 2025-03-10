@@ -6,13 +6,13 @@ Research Genie is a Retrieval Augmented Generation (RAG) based chatbot that answ
 
 ---
 
-Features
+## Features
 
-**Conversational Chatbot** - Engages in interactive Q&A with memory 
-**Retrieval-Augmented Generation (RAG)** - Uses ChromaDb for document retrieval 
-**Powered by LLAMA3 & OLLAMA** - generates high quality NLP responses
-**Fast & Efficient** - Avoids retrival for chitchat queries
-**User-Friendly UI** - Built with Streamlit
+- **Conversational Chatbot** - Engages in interactive Q&A with memory 
+- **Retrieval-Augmented Generation (RAG)** - Uses ChromaDb for document retrieval 
+- **Powered by LLAMA3 & OLLAMA** - generates high quality NLP responses
+- **Fast & Efficient** - Avoids retrival for chitchat queries
+- **User-Friendly UI** - Built with Streamlit
 
 ## Install Dependencies 
 
@@ -44,8 +44,8 @@ This project is open-source and available under MIT License.
 
 ## Contact
 Komal Khetlani 
-Email: komalkhetlani2525@gmail.com
-Linkedin : https://www.linkedin.com/in/komal-khetlani/
+- Email: komalkhetlani2525@gmail.com
+- Linkedin : https://www.linkedin.com/in/komal-khetlani/
 
 
 
