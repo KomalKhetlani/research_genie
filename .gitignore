@@ -10,3 +10,6 @@ data/arxiv_papers_json/*
 
 data/arxiv_papers_chunks_json/*
 !data/arxiv_papers_chunks_json/.gitkeep
+
+chroma_db_llama3/*
+!chroma_db_llama3/.gitkeep
