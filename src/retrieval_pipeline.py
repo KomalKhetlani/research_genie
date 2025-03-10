@@ -12,6 +12,17 @@ client = chromadb.PersistentClient(path=CHROMA_DB_LLAMA3_FOLDER_PATH)
 # Load the collection where embeddings are stored
 collection = client.get_collection(name="research_chunks")
 
+CHITCHAT_PATTERNS = [
+    "hi", "hello", "hey", "how are you", "good morning", "good evening",
+    "what's up", "how's it going", "nice to meet you", "bye", "goodbye"
+]
+
+def is_chitchat(query):
+    """Check if query is a small talk/chitchat"""
+    """Check if the query is small talk/chitchat."""
+    query_lower = query.lower().strip()
+    return any(query_lower.startswith(pattern) for pattern in CHITCHAT_PATTERNS)
+
 
 def get_embedding(text):
     """Generate embeddings using LLaMA 3 with Ollama."""
@@ -40,6 +51,10 @@ def retrieve_relevant_chunks(query, top_k=5):
 
 def generate_answer(query, chat_history):
     """Retrieve relevant chunks and use LLaMA 3 to generate an answer."""
+
+    if is_chitchat(query):
+        response = ollama.chat(model="llama3", messages=[{"role": "user", "content": query}])
+        return response["message"]["content"]
 
     # Retrieve relevant chunks
     retrieved_chunks, _ = retrieve_relevant_chunks(query)
