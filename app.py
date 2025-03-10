@@ -1,8 +1,12 @@
 import streamlit as st
 from src.retrieval_pipeline import generate_answer
 
-st.set_page_config(page_title="RAG Chatbot", layout="wide")
-st.title("RAG Chatbot with LLama3 and ChromaDB")
+st.set_page_config(page_title="Research Genie", layout="wide")
+st.title("Research Genie")
+st.markdown(
+    "<p style='font-size:16px; color:gray;'>Your AI Assistant for NLP & Large Language Models.</p>",
+    unsafe_allow_html=True
+)
 
 #Initialise session state for chat history
 if "chat_history" not in st.session_state:
