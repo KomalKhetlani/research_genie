@@ -39,6 +39,10 @@ For complex and NLP related queries. Relevant NLP documents are retrieved from C
 LLAMA3 generates a cohesive answer for the retrieved content
 The conversation history is maintained , allowing a seamless chat experience.
 
+## Technical Report
+
+If you are interested in reading the technical report for this project. Here is the link to my [medium article.](https://medium.com/@komalkhetlani2525/building-research-genie-a-rag-chatbot-for-nlp-and-llm-research-ccbd5a482ec9)
+
 ## License
 This project is open-source and available under MIT License.
 
@@ -46,6 +50,8 @@ This project is open-source and available under MIT License.
 Komal Khetlani 
 - Email: komalkhetlani2525@gmail.com
 - Linkedin : https://www.linkedin.com/in/komal-khetlani/
+
+
 
 
 
